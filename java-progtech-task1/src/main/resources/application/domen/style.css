@@ -1,0 +1,39 @@
+BorderPane, .tool-block {
+    -fx-border-color: #F3CCEE;
+    -fx-border-width: 2px;
+
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #FFF;
+}
+
+Label {
+    -fx-font-size: 14px;
+}
+
+.button, .spinner, ColorPicker {
+    -fx-font-size: 14px;
+    -fx-background-color: #FFF;
+
+    -fx-background-radius: 10px;
+    -fx-border-color: #EEE;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.button {
+    -fx-background-color: #F3CCEE;
+}
+
+/* https://stackoverflow.com/questions/54938390/how-to-change-button-width-for-javafx-spinner-with-css */
+
+.spinner { -fx-base: rgba(238, 238, 238, 255); }
+
+.spinner .increment-arrow-button {
+    -fx-body-color: #FFF;
+    -fx-padding: 1 2 1 2;
+}
+.spinner .decrement-arrow-button {
+-fx-body-color: #FFF;
+    -fx-padding: 1 2 1 2;
+}
