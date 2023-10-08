@@ -98,13 +98,13 @@ public abstract class Shape extends Object {
 }
 ```
 
-> [__Содержимое класса контроллера__](/src/main/java/application/domen/MainController.java) `MainController`
+> [__Содержимое класса контроллера__](./src/main/java/application/domen/MainController.java) `MainController`
 
-> [__Содержимое класса приложения__](/src/main/java/application/domen/MainApplication.java) `MainApplication`
+> [__Содержимое класса приложения__](./src/main/java/application/domen/MainApplication.java) `MainApplication`
 
-- [__Реализация класа__](/src/main/java/application/models/Circle.java) `Circle`
-- [__Реализация класа__](/src/main/java/application/models/Square.java) `Square`
-- [__Реализация класа__](/src/main/java/application/models/Triangle.java) `Triangle` 
+- [__Реализация класа__](./src/main/java/application/models/Circle.java) `Circle`
+- [__Реализация класа__](./src/main/java/application/models/Square.java) `Square`
+- [__Реализация класа__](./src/main/java/application/models/Triangle.java) `Triangle` 
 
 ## Диаграмма UML
 > [!INFO]

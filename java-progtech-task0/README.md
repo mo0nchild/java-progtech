@@ -58,9 +58,9 @@ public class Procent implements Procentable {
 }
 ```
 
-> [__Содержимое класса контроллера__](/src/main/java/application/domen/MainController.java) `MainController`
+> [__Содержимое класса контроллера__](./src/main/java/application/domen/MainController.java) `MainController`
 
-> [__Содержимое класса приложения__](/src/main/java/application/domen/MainApplication.java) `MainApplication`
+> [__Содержимое класса приложения__](./src/main/java/application/domen/MainApplication.java) `MainApplication`
 
 ## Результат выполнения
 
