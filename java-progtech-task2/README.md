@@ -51,7 +51,7 @@ public class ShapeFactoryFromName implements ShapeFactory {
 - [__Реализация класа__](./src/main/java/application/models/Triangle.java) `Triangle` 
 
 ## Диаграмма UML
-> [!INFO]
+> [!NOTE]
 > Диаграмма классов `application.models`:
 
 ![Результат выполнения](docs/Диаграмма.png)
