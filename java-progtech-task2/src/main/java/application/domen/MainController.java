@@ -7,6 +7,9 @@ import application.models.Circle;
 import application.models.Shape;
 import application.models.Square;
 import application.models.Triangle;
+import application.services.IRepository;
+import application.services.RepositoryException;
+import application.services.ShapeRepository;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -41,6 +44,7 @@ public class MainController implements Initializable {
     public TabPane mainTabPane;
 
     private ShapeFactory factory = new ShapeFactoryFromName();
+    private IRepository<Shape> repository = new ShapeRepository("data.txt");
     private Shape shape = null;
 
     @FXML
@@ -62,9 +66,9 @@ public class MainController implements Initializable {
     public final void drawCanvas(MouseEvent mouseEvent) {
         if (this.mainTabPane.getSelectionModel().isSelected(1)) {
             try {
-                this.shape = this.factory.createShape(this.shapeName.getText());
+                this.repository.putItem(this.factory.createShape(this.shapeName.getText()));
             }
-            catch (ShapeFactoryException error) {
+            catch (Exception error) {
                 new Alert(Alert.AlertType.ERROR, error.getMessage()).showAndWait();
             }
         }
