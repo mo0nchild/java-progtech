@@ -7,6 +7,7 @@ import javafx.scene.paint.Color;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Locale;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 
@@ -23,7 +24,7 @@ public class ShapeRepository implements IRepository<Shape> {
         this.shapeFactory = factory;
 
         if (!this.databaseFile.exists()) {
-            try { if (this.databaseFile.createNewFile()) throw new IOException(); }
+            try { if (!this.databaseFile.createNewFile()) throw new IOException(); }
             catch (IOException error) {
                 throw new RuntimeException(error);
             }
@@ -70,7 +71,7 @@ public class ShapeRepository implements IRepository<Shape> {
     public void removeItem(int index) throws RepositoryException { this.items.remove(index); }
 
     private final String generateString(int id, Shape shape) {
-        return String.format("id:[%s]; name:[%s]; background:[%s]; border:[%s]; x:[%.2f]; y:[%.2f]",
+        return String.format(Locale.US, "id:[%s]; name:[%s]; background:[%s]; border:[%s]; x:[%.2f]; y:[%.2f]",
                 String.valueOf(id), shape.getName(),
                 shape.getBackground().toString(), shape.getBorder().toString(),
                 shape.getX(), shape.getY()

@@ -1,0 +1,4 @@
+id:[0]; name:[Круг]; background:[0xf2ccedff]; border:[0xd68adbff]; x:[183.00]; y:[155.00]
+id:[1]; name:[Круг]; background:[0xf2ccedff]; border:[0xd68adbff]; x:[95.00]; y:[61.00]
+id:[2]; name:[Круг]; background:[0xf2ccedff]; border:[0xd68adbff]; x:[285.00]; y:[43.00]
+id:[3]; name:[Круг]; background:[0xf2ccedff]; border:[0xd68adbff]; x:[287.00]; y:[127.00]
