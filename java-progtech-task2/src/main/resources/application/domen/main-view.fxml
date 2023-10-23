@@ -14,13 +14,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="500.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #EEE" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.domen.MainController">
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #EEE" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.domen.MainController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
     <BorderPane prefHeight="285.0" prefWidth="Infinity">
-        <Canvas fx:id="sheet" height="285.0" nodeOrientation="INHERIT" onMouseClicked="#drawCanvas" width="500.0" BorderPane.alignment="CENTER">
+        <Canvas fx:id="sheet" height="285.0" nodeOrientation="INHERIT" onMouseClicked="#drawShapeHandler" width="500.0" BorderPane.alignment="CENTER">
         </Canvas>
     </BorderPane>
     <VBox spacing="10.0" styleClass="tool-block">
@@ -32,12 +32,12 @@
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <HBox alignment="CENTER" prefHeight="60.0" prefWidth="Infinity" spacing="10.0">
 
-                        <Button mnemonicParsing="false" onAction="#selectCircle" prefHeight="40.0" prefWidth="150" text="Круг" textAlignment="CENTER" />
-                        <Button mnemonicParsing="false" onAction="#selectSquare" prefHeight="40.0" prefWidth="150" text="Квадрат" textAlignment="CENTER" />
-                        <Button mnemonicParsing="false" onAction="#selectTriangle" prefHeight="40.0" prefWidth="150.0" text="Треугольник" textAlignment="CENTER" />
-                        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearCanvas" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #FFF;" />
+                              <Button mnemonicParsing="false" onAction="#selectCircleHandler" prefHeight="40.0" prefWidth="150" text="Круг" textAlignment="CENTER" />
+                        <Button mnemonicParsing="false" onAction="#selectSquareHandler" prefHeight="40.0" prefWidth="150" text="Квадрат" textAlignment="CENTER" />
+                        <Button mnemonicParsing="false" onAction="#selectTriangleHandler" prefHeight="40.0" prefWidth="150.0" text="Треугольник" textAlignment="CENTER" />
+                        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearCanvasHandler" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #FFF;" />
 
-                    </HBox>
+                          </HBox>
                     <HBox alignment="CENTER" prefHeight="60.0" spacing="30.0">
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                             <Label prefHeight="17.0" prefWidth="100.0" text="Размер: " />
@@ -57,15 +57,18 @@
                         </VBox>
                     </HBox>
 
-                </VBox>
+                      </VBox>
             </Tab>
             <Tab text="Фабричный метод">
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                    <Label prefHeight="20.0" prefWidth="420.0" text="Название фигуры:"/>
-                    <TextField fx:id="shapeName"/>
+                    <Label prefHeight="20.0" prefWidth="420.0" text="Название фигуры:" />
+                    <TextField fx:id="shapeName" />
                 </VBox>
             </Tab>
         </TabPane>
-        <Label fx:id="infoShape" style="-fx-text-fill: #D78ADB" text="Определение позиции фигуры: (0, 0)" />
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+            <Label fx:id="infoShape" style="-fx-text-fill: #D78ADB" text="Определение позиции фигуры: (0, 0)"/>
+            <Button mnemonicParsing="false" text="Назад" onAction="#removeShapeHandler"/>
+        </HBox>
     </VBox>
 </VBox>

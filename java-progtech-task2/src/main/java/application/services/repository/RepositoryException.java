@@ -1,4 +1,4 @@
-package application.services;
+package application.services.repository;
 
 public class RepositoryException extends Exception {
 

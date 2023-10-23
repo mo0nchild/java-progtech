@@ -1,9 +1,8 @@
-package application.models;
+package application.models.shape;
 
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import org.jetbrains.annotations.NotNull;
 
 public final class Square extends Shape {
 
@@ -11,7 +10,7 @@ public final class Square extends Shape {
     private Double size = 0.0;
 
     public Square(Color border, Color background, Point2D position, double size) {
-        super(border, background, position);
+        super(border, background, position, "Квадрат");
         this.size = size;
     }
 
@@ -23,7 +22,7 @@ public final class Square extends Shape {
     public final void setSize(final Double value) { this.size = value; }
 
     @Override
-    public void shapeDraw(@NotNull GraphicsContext context) throws Exception {
+    public void shapeDraw(GraphicsContext context) throws Exception {
         if(super.getBorder() != null) {
             context.setStroke(super.getBorder());
             context.strokeRect(super.getX() - this.size / 2, super.getY() - this.size / 2, this.size, this.size);

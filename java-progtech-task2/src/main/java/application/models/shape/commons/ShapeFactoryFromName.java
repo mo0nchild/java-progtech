@@ -1,9 +1,9 @@
-package application.commons;
+package application.models.shape.commons;
 
-import application.models.Circle;
-import application.models.Shape;
-import application.models.Square;
-import application.models.Triangle;
+import application.models.shape.Circle;
+import application.models.shape.Shape;
+import application.models.shape.Square;
+import application.models.shape.Triangle;
 
 import java.util.HashMap;
 

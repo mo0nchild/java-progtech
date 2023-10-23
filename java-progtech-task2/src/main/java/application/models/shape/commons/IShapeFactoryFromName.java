@@ -1,6 +1,6 @@
-package application.commons;
+package application.models.shape.commons;
 
-import application.models.Shape;
+import application.models.shape.Shape;
 
 public interface IShapeFactoryFromName {
     public Shape createShape(String name) throws ShapeFactoryException;

@@ -5,9 +5,12 @@ import javafx.beans.Observable;
 
 import java.util.Collection;
 
-public interface IShapeCollection extends Observable {
-    public void putItem(Shape item);
-    public Shape getItem();
-    public Collection<Shape> getAll();
-    public void removeItem();
+public interface IShapeStackCollection extends Observable {
+    public void putItem(Shape item) throws Exception;
+    public void putAll(Collection<Shape> item) throws Exception;
+
+    public Shape getItem() throws Exception;
+    public Collection<Shape> getAll() throws Exception;
+    public void removeItem() throws Exception;
+    public void removeAll() throws Exception;
 }

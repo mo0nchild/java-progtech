@@ -1,4 +1,4 @@
-package application.commons;
+package application.models.shape.commons;
 
 public class ShapeFactoryException extends Exception {
     private final String shapeName;

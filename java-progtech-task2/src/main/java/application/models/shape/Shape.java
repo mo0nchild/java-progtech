@@ -1,4 +1,4 @@
-package application.models;
+package application.models.shape;
 
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.GraphicsContext;
@@ -25,7 +25,7 @@ public abstract class Shape extends Object {
     public final Double getX() { return this.posX; }
     public final Double getY() { return this.posY; }
 
-    public final void setPosition(double x, double y) {
+    public void setPosition(double x, double y) {
         this.posX = x;
         this.posY = y;
     }

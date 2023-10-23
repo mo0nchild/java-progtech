@@ -1,0 +1,1 @@
+id:[0]; name:[Треугольник]; background:[0xf2ccedff]; border:[0xd68adbff]; x:[208.00]; y:[88.00]

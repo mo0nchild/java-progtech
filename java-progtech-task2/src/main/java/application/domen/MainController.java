@@ -1,15 +1,18 @@
 package application.domen;
 
-import application.commons.ShapeFactory;
-import application.commons.ShapeFactoryException;
-import application.commons.ShapeFactoryFromName;
-import application.models.Circle;
-import application.models.Shape;
-import application.models.Square;
-import application.models.Triangle;
-import application.services.IRepository;
-import application.services.RepositoryException;
-import application.services.ShapeRepository;
+import application.models.shape.collections.IShapeStackCollection;
+import application.models.shape.collections.ShapeStackCollection;
+import application.models.shape.commons.IShapeFactoryFromName;
+import application.models.shape.commons.ShapeFactoryException;
+import application.models.shape.commons.ShapeFactoryFromName;
+import application.models.shape.Circle;
+import application.models.shape.Shape;
+import application.models.shape.Square;
+import application.models.shape.Triangle;
+import application.services.repository.IRepository;
+import application.services.repository.ShapeRepository;
+import application.services.repository.commons.ShapeRepositoryFactory;
+import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,7 +23,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -43,49 +45,66 @@ public class MainController implements Initializable {
     @FXML
     public TabPane mainTabPane;
 
-    private ShapeFactory factory = new ShapeFactoryFromName();
-    private IRepository<Shape> repository = new ShapeRepository("data.txt");
+    private static final String databaseFilename = "database.txt";
+    private IShapeFactoryFromName shapeFactory = new ShapeFactoryFromName();
+    private IShapeStackCollection shapeCollection = new ShapeStackCollection(
+            new ShapeRepositoryFactory(MainController.databaseFilename, this.shapeFactory));
     private Shape shape = null;
 
     @FXML
-    public final void selectCircle(ActionEvent actionEvent) {
+    public final void selectCircleHandler(ActionEvent actionEvent) {
         this.shape = new Circle(border.getValue(), background.getValue(), Point2D.ZERO, sizeNumber.getValue());
     }
 
     @FXML
-    public void selectSquare(ActionEvent actionEvent) {
+    public void selectSquareHandler(ActionEvent actionEvent) {
         this.shape = new Square(border.getValue(), background.getValue(), Point2D.ZERO, sizeNumber.getValue());
     }
 
     @FXML
-    public void selectTriangle(ActionEvent actionEvent) {
+    public void selectTriangleHandler(ActionEvent actionEvent) {
         this.shape = new Triangle(border.getValue(), background.getValue(), Point2D.ZERO, sizeNumber.getValue());
     }
 
     @FXML
-    public final void drawCanvas(MouseEvent mouseEvent) {
+    public final void drawShapeHandler(MouseEvent mouseEvent) {
         if (this.mainTabPane.getSelectionModel().isSelected(1)) {
-            try {
-                this.repository.putItem(this.factory.createShape(this.shapeName.getText()));
-            }
-            catch (Exception error) {
+            try { this.shape = this.shapeFactory.createShape(this.shapeName.getText()); }
+            catch (ShapeFactoryException error) {
                 new Alert(Alert.AlertType.ERROR, error.getMessage()).showAndWait();
             }
         }
         if(this.shape == null) return;
         this.shape.setPosition(mouseEvent.getX(), mouseEvent.getY());
-        try {
-            this.shape.shapeDraw(this.sheet.getGraphicsContext2D());
-        }
+
+        try { this.shapeCollection.putItem(shape); }
         catch (Exception error) {
             new Alert(Alert.AlertType.ERROR, error.getMessage()).showAndWait();
         }
         this.infoShape.setText(this.shape.toString());
     }
     @FXML
-    public void clearCanvas(ActionEvent actionEvent) {
-        this.sheet.getGraphicsContext2D().clearRect(0, 0, this.sheet.getWidth(), this.sheet.getHeight());
+    public void clearCanvasHandler(ActionEvent actionEvent) {
+        try { this.shapeCollection.removeAll(); }
+        catch (Exception error) {
+            new Alert(Alert.AlertType.ERROR, error.getMessage()).showAndWait();
+        }
         this.infoShape.setText(String.format("Определение позиции фигуры: (0, 0)"));
+    }
+    @FXML
+    public void removeShapeHandler(ActionEvent actionEvent) {
+        try { this.shapeCollection.removeItem(); }
+        catch (Exception error) {
+            new Alert(Alert.AlertType.ERROR, error.getMessage()).showAndWait();
+        }
+        this.infoShape.setText(String.format("Возвращение назад"));
+    }
+    private void renderCanvasState() {
+        this.sheet.getGraphicsContext2D().clearRect(0, 0, this.sheet.getWidth(), this.sheet.getHeight());
+        try {
+            for (var item : this.shapeCollection.getAll()) item.shapeDraw(this.sheet.getGraphicsContext2D());
+        }
+        catch (Exception error) { throw new RuntimeException(error); }
     }
 
     @Override
@@ -102,7 +121,8 @@ public class MainController implements Initializable {
         }
         this.border.setValue(new Color(0.84, 0.54, 0.86, 1.0));
         this.background.setValue(new Color(0.95, 0.8, 0.93, 1.0));
+
+        this.shapeCollection.addListener((Observable sender) -> { this.renderCanvasState(); });
+        this.renderCanvasState();
     }
-
-
 }
