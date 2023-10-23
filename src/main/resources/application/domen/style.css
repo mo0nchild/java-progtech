@@ -1,0 +1,32 @@
+.label, .spinner, Text {
+    -fx-font-size: 14px;
+}
+
+.result-block {
+    -fx-background-color: #F3CCEE;
+    -fx-font-size: 14px;
+    -fx-border-size: 2px;
+    -fx-border-color: #EEE;
+
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+ }
+
+.button {
+    -fx-background-color: #F3CCEE;
+    -fx-font-size: 14px;
+    -fx-border-size: 2px;
+    -fx-border-color: #EEE;
+
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.data-block {
+    -fx-background-color: #FFF;
+    -fx-border-size: 1px;
+    -fx-border-color: #AAA;
+
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
