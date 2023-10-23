@@ -1,22 +1,23 @@
-package application.models;
+package application.models.shape;
 
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
-import org.jetbrains.annotations.NotNull;
 
 public abstract class Shape extends Object {
+    private Double posX, posY;
+    private Color border, background;
+    private final String name;
 
-    private final Color border, background;
-    private Double posX = 0.0, posY = 0.0;
-
-    public Shape(Color border, Color background, Point2D position) {
+    public Shape(Color border, Color background, Point2D position, String name) {
         this.border = border;
         this.background = background;
         this.posX = position.getX();
         this.posY = position.getY();
+        this.name = name;
     }
+    public final String getName() { return this.name; }
 
     public final Color getBorder() { return this.border; }
     public final Color getBackground() { return this.background; }
@@ -28,12 +29,14 @@ public abstract class Shape extends Object {
         this.posX = x;
         this.posY = y;
     }
+    public final void setBorder(Color value) { this.border = value; }
+    public final void setBackground(Color value) { this.background = value; }
 
     @Override
     public String toString() {
         return String.format("Position: (%.2f, %.2f)\n", this.posX, this.posY);
     }
 
-    public abstract void shapeDraw(@NotNull final GraphicsContext context) throws Exception;
+    public abstract void shapeDraw(final GraphicsContext context) throws Exception;
 
 }

@@ -1,21 +1,22 @@
-package application.models;
+package application.models.shape;
 
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
 
 public final class Triangle extends Shape {
 
+    public static Double defaultSize = 50.0;
     private Double size = 0.0;
     private Point2D[] vertexs = null;
 
     public Triangle(Color border, Color background, Point2D position, double size) {
-        super(border, background, position);
+        super(border, background, position, "Треугольник");
         this.size = size;
         this.vertexs = this.calculateVertexs();
+    }
+    public Triangle() {
+        this(Color.web("#D68ADB"), Color.web("#F2CCED"), Point2D.ZERO, Triangle.defaultSize);
     }
 
     private Point2D[] calculateVertexs() {
@@ -33,7 +34,6 @@ public final class Triangle extends Shape {
         this.size = value;
         this.vertexs = this.calculateVertexs();
     }
-
     @Override
     public void setPosition(double x, double y) {
         super.setPosition(x, y);
@@ -41,7 +41,7 @@ public final class Triangle extends Shape {
     }
 
     @Override
-    public void shapeDraw(@NotNull GraphicsContext context) throws Exception {
+    public void shapeDraw(GraphicsContext context) throws Exception {
         if (this.vertexs == null) throw new Exception("Вершины не были сформированы");
         final double[] positionX = new double[this.vertexs.length], positionY = new double[this.vertexs.length];
 
