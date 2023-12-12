@@ -3,6 +3,6 @@ module com.example.asdasd {
     requires javafx.fxml;
 
 
-    opens com.example.asdasd to javafx.fxml;
-    exports com.example.asdasd;
+    opens application.domen to javafx.fxml;
+    exports application.domen;
 }
