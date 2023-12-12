@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="261.0" prefWidth="325.0" spacing="20.0" style="-fx-background-color: #EEE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.domen.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <top>
+                <FlowPane prefHeight="32.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ListView fx:id="listView" prefHeight="80.0" prefWidth="285.0" style="-fx-border-color: #611bf7; -fx-border-width: 2px; -fx-border-radius: 10px;">
+                     <FlowPane.margin>
+                        <Insets bottom="10.0" />
+                     </FlowPane.margin></ListView>
+                  <BorderPane prefHeight="139.0" prefWidth="282.0" style="-fx-background-color: #FFF; -fx-border-color: #611bf7; -fx-border-width: 2px; -fx-border-radius: 10px;">
+                     <center>
+                            <Canvas fx:id="graphicContent" height="136.0" onMouseClicked="#drawShapeOnCanvas" width="282.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                    </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin></FlowPane>
+            </top>
+        </BorderPane>
+    </children>
+</VBox>
