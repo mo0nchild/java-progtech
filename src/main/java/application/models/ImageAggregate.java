@@ -1,5 +1,6 @@
-package application.services.implement;
+package application.models;
 
+import application.services.implement.ImageIterator;
 import application.services.interfaces.IAggregate;
 import application.services.interfaces.Iterator;
 import javafx.scene.image.Image;
@@ -9,9 +10,9 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
-public class ConcreteAggregate implements IAggregate<Image> {
+public class ImageAggregate implements IAggregate<Image> {
     private final String path;
-    public ConcreteAggregate(String path) {
+    public ImageAggregate(String path) {
         super();
         this.path = path;
     }

@@ -5,17 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28317226-4217-4dcb-9ba3-8c70f596f04e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/models/CoolImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/models/ImageAggregate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/services/implement/CoolImageBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/services/implement/CoolImageDirector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/services/implement/ImageIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/services/interfaces/IAggregate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/services/interfaces/IBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/services/interfaces/Iterator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/asdasd/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/domen/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/asdasd/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/domen/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/domen/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/domen/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/domen/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/domen/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/asdasd/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application/domen/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application/domen/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application/domen/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +58,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "task4-iteratorbuilder",
     "jdk.selected.JAVA_MODULE": "21"
   }

@@ -1,8 +1,8 @@
-package application.interfaces;
+package application.services.interfaces;
 
-public interface Iterator {
+public interface Iterator<TItem> {
     public boolean hasNext();
     public boolean hasPrevious();
-    public Object next();
-    public Object preview();
+    public TItem next();
+    public TItem preview();
 }
