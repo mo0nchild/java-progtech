@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 
 public abstract class Shape implements Cloneable {
     public final static Double ShapeSize = 32.0;
-    
+
     private Point2D position;
     private final Color background;
     private final Double size;
