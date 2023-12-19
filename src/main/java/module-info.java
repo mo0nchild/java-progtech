@@ -3,6 +3,6 @@ module application.domen.task7observer {
     requires javafx.fxml;
 
 
-    opens application.domen.task7observer to javafx.fxml;
-    exports application.domen.task7observer;
+    opens application.domen to javafx.fxml;
+    exports application.domen;
 }

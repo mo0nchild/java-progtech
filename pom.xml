@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                application.domen.task7observer/application.domen.task7observer.HelloApplication
+                                application.domen.task7observer/application.domen.MainApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
