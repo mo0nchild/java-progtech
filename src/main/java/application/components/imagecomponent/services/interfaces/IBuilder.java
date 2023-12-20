@@ -1,4 +1,4 @@
-package application.components.builder.services.interfaces;
+package application.components.imagecomponent.services.interfaces;
 
 import javafx.scene.image.Image;
 

@@ -1,4 +1,4 @@
-package application.components.builder.models;
+package application.components.imagecomponent.models;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;

@@ -1,6 +1,6 @@
-package application.components.builder.services.implement;
+package application.components.imagecomponent.services.implement;
 
-import application.components.builder.services.interfaces.Iterator;
+import application.components.imagecomponent.services.interfaces.Iterator;
 import javafx.scene.image.Image;
 
 import java.nio.file.Paths;

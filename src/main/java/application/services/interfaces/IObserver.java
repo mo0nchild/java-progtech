@@ -1,8 +1,5 @@
-package application.services;
+package application.services.interfaces;
 
-public interface IObserver<TSubject> {
-    public final class EventArgs extends Object {
-
-    }
-    public abstract void update(Object sender, EventArgs);
+public interface IObserver {
+    public abstract void update(NotifyArgs args);
 }

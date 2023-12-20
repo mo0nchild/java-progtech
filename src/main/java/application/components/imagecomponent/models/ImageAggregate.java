@@ -1,8 +1,8 @@
-package application.components.builder.models;
+package application.components.imagecomponent.models;
 
-import application.components.builder.services.implement.ImageIterator;
-import application.components.builder.services.interfaces.IAggregate;
-import application.components.builder.services.interfaces.Iterator;
+import application.components.imagecomponent.services.implement.ImageIterator;
+import application.components.imagecomponent.services.interfaces.IAggregate;
+import application.components.imagecomponent.services.interfaces.Iterator;
 import javafx.scene.image.Image;
 
 import java.io.File;

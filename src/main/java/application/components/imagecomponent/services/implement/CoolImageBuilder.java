@@ -1,7 +1,7 @@
-package application.components.builder.services.implement;
+package application.components.imagecomponent.services.implement;
 
-import application.components.builder.models.CoolImage;
-import application.components.builder.services.interfaces.IBuilder;
+import application.components.imagecomponent.models.CoolImage;
+import application.components.imagecomponent.services.interfaces.IBuilder;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
