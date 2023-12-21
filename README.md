@@ -3,12 +3,12 @@
 > [!IMPORTANT]
 > Лабораторные работы по дисциплине __"Технология программирования"__:unicorn::
 
-- [x] Task 0 - [Делегирование](./java-progtech/tree/task0-delegate)
-- [x] Task 1 - [Абстрактный суперкласс](./java-progtech-task1/README.md)
-- [x] Task 2 - [Фабричный метод](./java-progtech-task2/README.md)
+- [x] Task 0 - [Делегирование](https://github.com/mo0nchild/java-progtech/tree/task0-delegate)
+- [x] Task 1 - [Абстрактный суперкласс](https://github.com/mo0nchild/java-progtech/tree/task1-abstractclass)
+- [x] Task 2 - [Фабричный метод](https://github.com/mo0nchild/java-progtech/tree/task2-factorymethod)
 - [ ] Task 3 - Хранитель
-- [x] Task 4 - Итератор
-- [x] Task 5 - Строитель
-- [x] Task 6 - Прототип
-- [x] Task 7 - Наблюдатель
+- [x] Task 4 - [Итератор](https://github.com/mo0nchild/java-progtech/tree/task4-iteratorbuilder)
+- [x] Task 5 - [Строитель](https://github.com/mo0nchild/java-progtech/tree/task4-iteratorbuilder)
+- [x] Task 6 - [Прототип](https://github.com/mo0nchild/java-progtech/tree/task6-prototype)
+- [x] Task 7 - [Наблюдатель](https://github.com/mo0nchild/java-progtech/tree/task7-observer)
 - [ ] Task 8 - Декоратор
