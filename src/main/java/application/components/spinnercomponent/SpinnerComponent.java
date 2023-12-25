@@ -26,10 +26,10 @@ public class SpinnerComponent implements IObserver {
     public final Integer getAngle() { return this.angle; }
     public final void setAngle(Integer value) { this.angle = value; }
     @Override
-    public void update(NotifyArgs args) {
+    public void update() {
         var rotateTransition = new RotateTransition(Duration.seconds(0.1), rotatingText);
         rotateTransition.setByAngle(this.angle);
-        Platform.runLater(() -> {
+        Platform.runLater(() -> { \\ использовать Shape javafx чтобы не обновляться через платформу
             rotateTransition.play();
             this.componentBody.setCenter(rotatingText);
         });
