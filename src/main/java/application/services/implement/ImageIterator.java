@@ -22,6 +22,7 @@ public class ImageIterator implements Iterator<Image> {
 
     protected Image selectImage(int iterator) {
         return new Image(Paths.get(this.basePath + iterator + ".jpg").toUri().toString());
+        //может все-таки перенести работу с файлами в агрегатор, а здесь уже идти по списку
     }
     @Override
     public boolean hasNext() { return this.current >= 0 && this.current + 1 <= this.max; }
