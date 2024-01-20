@@ -1,13 +1,17 @@
-package application.services;
+package application.models;
 
-import application.models.IChristmasTree;
 import javafx.scene.layout.Pane;
 
-public abstract class TreeDecorator implements IChristmasTree {
+import java.util.ArrayList;
+import java.util.Map;
 
-    public TreeDecorator() {
+public abstract class TreeDecorator implements IChristmasTree {
+    private final IChristmasTree tree;
+    public TreeDecorator(IChristmasTree tree) {
         super();
+        this.tree = tree;
     }
+    public IChristmasTree getTree() { return this.tree; }
     @Override
-    public abstract void draw(Pane pane);
+    public void draw(Pane pane) { tree.draw(pane); }
 }
