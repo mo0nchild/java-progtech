@@ -11,4 +11,4 @@
 - [x] Task 5 - [Строитель](https://github.com/mo0nchild/java-progtech/tree/task4-iteratorbuilder)
 - [x] Task 6 - [Прототип](https://github.com/mo0nchild/java-progtech/tree/task6-prototype)
 - [x] Task 7 - [Наблюдатель](https://github.com/mo0nchild/java-progtech/tree/task7-observer)
-- [ ] Task 8 - Декоратор
+- [x] Task 8 - [Декоратор](https://github.com/mo0nchild/java-progtech/tree/task8-decorator)
