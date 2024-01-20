@@ -14,4 +14,10 @@ public abstract class TreeDecorator implements IChristmasTree {
     public IChristmasTree getTree() { return this.tree; }
     @Override
     public void draw(Pane pane) { tree.draw(pane); }
+    public final String getState() {
+        if (this.tree instanceof TreeDecorator decorator) {
+            return String.format("%s\n%s", this.toString(), decorator.getState());
+        }
+        return String.format("%s\n", this.toString());
+    }
 }

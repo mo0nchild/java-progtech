@@ -12,60 +12,71 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.ParameterizedType;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public final class MainController implements Initializable {
+    private IChristmasTree tree = new ChristmasTree();
+    @FXML
+    private Label stateLabel;
     @FXML
     private Pane paneTree;
-    private IChristmasTree tree = new ChristmasTree();
+    private final ArrayList<String> appliedDecorators = new ArrayList<>();
+
+    private <T extends TreeDecorator> IChristmasTree decorateTree(Class<T> decoratorType) {
+        if(this.appliedDecorators.contains(decoratorType.getName())) return this.tree;
+        this.appliedDecorators.add(decoratorType.getName());
+        try {
+            return decoratorType.getConstructor(IChristmasTree.class).newInstance(this.tree);
+        }
+        catch (Exception errorInfo) { throw new RuntimeException(errorInfo); }
+    }
+    private void attachableHandlerBehavior(Supplier<IChristmasTree> decoration) {
+        this.paneTree.getChildren().clear();
+        (this.tree = decoration.get()).draw(this.paneTree);
+        if (this.tree instanceof TreeDecorator decorator) {
+            this.stateLabel.setText(String.format("Свойства:\n%s", decorator.getState()));
+        }
+    }
+    @FXML
+    public void addPresentButtonHandler(ActionEvent actionEvent) {
+        this.attachableHandlerBehavior(() -> this.decorateTree(Presents.class));
+    }
+    @FXML
+    public void addStarButtonHandler(ActionEvent actionEvent) {
+        this.attachableHandlerBehavior(() -> this.decorateTree(Star.class));
+    }
+    @FXML
+    public void addGirlandButtonHandler(ActionEvent actionEvent) {
+        this.attachableHandlerBehavior(() -> this.decorateTree(Girland.class));
+    }
+    @FXML
+    public void clearAllButtonClickedHandler(ActionEvent actionEvent) {
+        this.appliedDecorators.clear();
+        this.attachableHandlerBehavior(ChristmasTree::new);
+
+        this.stateLabel.setText("Свойства:");
+    }
+    @FXML
+    public void addAllButtonClickedHandler(ActionEvent actionEvent) {
+        this.paneTree.getChildren().clear();
+        this.tree = this.decorateTree(Girland.class);
+        this.tree = this.decorateTree(Presents.class);
+        this.tree = this.decorateTree(Star.class);
+
+        if (this.tree instanceof TreeDecorator decorator) {
+            this.stateLabel.setText(String.format("Свойства:\n%s", decorator.getState()));
+        }
+        this.tree.draw(this.paneTree);
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.paneTree.toFront();
         this.tree.draw(this.paneTree);
-    }
-    private final class GenericClass<T extends TreeDecorator> {
-        private final Class<T> genericType;
-        public GenericClass(Class<T> type) {
-            super();
-            this.genericType = type;
-        }
-        public Class<T> getGenericType() { return this.genericType; }
-    }
-    private <T extends TreeDecorator> IChristmasTree decorateTree(Class<T> newDecorator) {
-        var decorator = this.tree;
-        while (TreeDecorator.class.isAssignableFrom(decorator.getClass())) {
-            if (decorator.getClass().equals(new GenericClass<T>(newDecorator).getGenericType())) {
-                return this.tree;
-            }
-            decorator = ((TreeDecorator)decorator).getTree();
-        }
-        try { return newDecorator.getConstructor(IChristmasTree.class).newInstance(this.tree); }
-        catch (Exception error) { throw new RuntimeException(error); }
-    }
-    @FXML
-    public void addPresentButtonHandler(ActionEvent actionEvent) {
-        this.paneTree.getChildren().clear();
-        (this.tree = new Presents(this.tree)).draw(this.paneTree);
-    }
-    @FXML
-    public void addStarButtonHandler(ActionEvent actionEvent) {
-        this.paneTree.getChildren().clear();
-        (this.tree = new Star(this.tree)).draw(this.paneTree);
-    }
-    @FXML
-    public void addGirlandButtonHandler(ActionEvent actionEvent) {
-//        this.paneTree.getChildren().clear();
-//        (this.tree = new Girland(this.tree)).draw(this.paneTree);
-        (this.tree = this.decorateTree(Girland.class)).draw(this.paneTree);
-    }
-    @FXML
-    public void clearAllButtonClickedHandler(ActionEvent actionEvent) {
-        this.paneTree.getChildren().clear();
-        (this.tree = new ChristmasTree()).draw(this.paneTree);
-    }
-    @FXML
-    public void addAllButtonClickedHandler(ActionEvent actionEvent) {
     }
 }

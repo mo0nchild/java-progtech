@@ -2,9 +2,12 @@ package application.services;
 
 import application.models.IChristmasTree;
 import application.models.TreeDecorator;
+import javafx.animation.FadeTransition;
+import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
+import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +16,7 @@ import java.util.Random;
 public class Girland extends TreeDecorator {
     private static final Random Random = new Random();
     private static Integer Previous = 0;
-    private ArrayList<Color> colors = new ArrayList<>() {{
+    private final ArrayList<Color> colors = new ArrayList<>() {{
             add(Color.AQUAMARINE);
             add(Color.CRIMSON);
             add(Color.PURPLE);
@@ -21,8 +24,16 @@ public class Girland extends TreeDecorator {
             add(Color.DEEPSKYBLUE);
             add(Color.ORANGE);
     }};
+    private final ArrayList<Shape> shapes = new ArrayList<>();
     public Girland(IChristmasTree tree) {
         super(tree);
+        for (var index = 0; index < this.getRandomInt(10, 20); index++) {
+            var posY = this.getRandomInt(60, 210);
+            var posX = this.getRandomX(posY);
+
+            var color = this.colors.get(this.getRandomInt(0, this.colors.size() - 1));
+            this.shapes.add(new Circle(posX, posY, 10, color));
+        }
     }
     @Override
     public void draw(Pane paneLight) {
@@ -42,13 +53,17 @@ public class Girland extends TreeDecorator {
                 : this.getRandomInt(220 - posY, posY - 20);
     }
     private void drawWithGirland(Pane paneLight) {
-        for (var index = 0; index < this.getRandomInt(10, 20); index++) {
-            var posY = this.getRandomInt(60, 210);
-            var posX = this.getRandomX(posY);
+        for (var item : this.shapes) {
+            var transition = new FadeTransition(Duration.millis(800), item);
+            transition.setFromValue(1.0);
+            transition.setToValue(0.3);
+            transition.setCycleCount(-1);
+            transition.setAutoReverse(true);
 
-            var color = this.colors.get(this.getRandomInt(0, this.colors.size() - 1));
-            var circle = new Circle(posX, posY, 10, color);
-            paneLight.getChildren().addAll(circle);
+            transition.play();
+            paneLight.getChildren().addAll(item);
         }
     }
+    @Override
+    public String toString() { return "- Гирлянда"; }
 }

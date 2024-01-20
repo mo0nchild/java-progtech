@@ -36,4 +36,6 @@ public class Star extends TreeDecorator {
         );
         paneStar.getChildren().addAll(path);
     }
+    @Override
+    public String toString() { return "- Звезда"; }
 }
