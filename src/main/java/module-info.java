@@ -3,6 +3,6 @@ module application.domen.task14chainresp {
     requires javafx.fxml;
 
 
-    opens application.domen.task14chainresp to javafx.fxml;
-    exports application.domen.task14chainresp;
+    opens application.domen to javafx.fxml;
+    exports application.domen;
 }
