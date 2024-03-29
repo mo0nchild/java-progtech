@@ -12,4 +12,5 @@
 - [x] Task 6 - [Прототип](https://github.com/mo0nchild/java-progtech/tree/task6-prototype)
 - [x] Task 7 - [Наблюдатель](https://github.com/mo0nchild/java-progtech/tree/task7-observer)
 - [x] Task 8 - [Декоратор](https://github.com/mo0nchild/java-progtech/tree/task8-decorator)
+- [x] Task 8a - [DAO](https://github.com/mo0nchild/java-progtech/tree/task8a-dao)
 - [x] Task 14 - [Цепочка обязанностей](https://github.com/mo0nchild/java-progtech/tree/task14-chainresp)
