@@ -14,3 +14,4 @@
 - [x] Task 8 - [Декоратор](https://github.com/mo0nchild/java-progtech/tree/task8-decorator)
 - [x] Task 8a - [DAO](https://github.com/mo0nchild/java-progtech/tree/task8a-dao)
 - [x] Task 14 - [Цепочка обязанностей](https://github.com/mo0nchild/java-progtech/tree/task14-chainresp)
+- [x] Task 17 - [Поставщик-потребитель](https://github.com/mo0nchild/java-progtech/tree/task17-produce-consumer)
