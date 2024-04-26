@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e67b9fc3-a3f3-4f8c-b34a-8454d583e616" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/models/MPolygon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/models/interfaces/PointContaining.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/models/interfaces/Resizable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/TestClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/TestSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/infrastructure/ITestSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/infrastructure/TestAssertException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/infrastructure/TestMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/domen/taskunittest/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/domen/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/domen/taskunittest/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/domen/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application/domen/taskunittest/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application/domen/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/TestSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/TestSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +35,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "task-unittest"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;task-unittest&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="task-unittest" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
