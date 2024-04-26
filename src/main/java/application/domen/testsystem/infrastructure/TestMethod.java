@@ -1,4 +1,4 @@
-package application.domen.taskunittest.testsystem.infrastructure;
+package application.domen.testsystem.infrastructure;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,8 +1,9 @@
 module application.domen.taskunittest {
     requires javafx.controls;
     requires javafx.fxml;
+    requires static lombok;
+    requires batik.awt.util;
 
-
-    opens application.domen.taskunittest to javafx.fxml;
-    exports application.domen.taskunittest;
+    opens application.domen to javafx.fxml;
+    exports application.domen;
 }

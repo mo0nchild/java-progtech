@@ -1,8 +1,6 @@
-package application.domen.taskunittest.testsystem.infrastructure;
+package application.domen.testsystem.infrastructure;
 
-import application.domen.taskunittest.testsystem.TestClass;
-
-import java.lang.reflect.InvocationTargetException;
+import application.domen.testsystem.TestClass;
 
 public interface ITestSystem {
     public void runTest(Class<? extends TestClass> testClass) throws ReflectiveOperationException;

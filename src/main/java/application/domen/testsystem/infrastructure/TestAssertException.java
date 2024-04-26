@@ -1,4 +1,4 @@
-package application.domen.taskunittest.testsystem.infrastructure;
+package application.domen.testsystem.infrastructure;
 
 public class TestAssertException extends RuntimeException {
     public TestAssertException(String message) {

@@ -1,5 +1,7 @@
-package application.domen.taskunittest;
+package application.domen;
 
+import application.domen.testsystem.TestSystem;
+import application.domen.unittests.PolygonTest;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,8 +18,7 @@ public class MainApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
-    public static void main(String[] args) {
-        launch();
+    public static void main(String[] args) throws ReflectiveOperationException {
+        new TestSystem().runTest(PolygonTest.class);
     }
 }

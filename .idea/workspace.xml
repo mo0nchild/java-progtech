@@ -4,15 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e67b9fc3-a3f3-4f8c-b34a-8454d583e616" name="Changes" comment="" />
+    <list default="true" id="e67b9fc3-a3f3-4f8c-b34a-8454d583e616" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/models/MPolygon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/models/interfaces/PointContaining.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/models/interfaces/Resizable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/TestClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/TestSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/infrastructure/ITestSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/infrastructure/TestAssertException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/domen/testsystem/infrastructure/TestMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/domen/taskunittest/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/domen/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/domen/taskunittest/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/domen/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application/domen/taskunittest/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application/domen/main-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2fc9oLOXTF1n1gbBdfSz9mFVBzD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,9 +53,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "task-unittest"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="task-unittest" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="application.domen.MainApplication" />
+      <module name="task-unittest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
